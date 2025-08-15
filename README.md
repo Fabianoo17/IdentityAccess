@@ -18,8 +18,7 @@ API de autenticação em **.NET 8** com **JWT + Refresh Token (rotação e revog
 
 ## 🚀 Como rodar
 
-### Opção A — Com Docker (API + SQL)
-```bash
-
 docker compose up -d --build
 # API: http://localhost:8080/swagger
+
+
