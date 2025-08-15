@@ -1,5 +1,5 @@
 # IdentityAccess
-[![CI](https://img.shields.io/github/actions/workflow/status/<user>/IdentityAccess/ci.yml?branch=main)](#)
+[![CI](https://img.shields.io/github/actions/workflow/status/Fabianoo17/IdentityAccess/.github/workflows/ci.yml?branch=main)](#)
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
