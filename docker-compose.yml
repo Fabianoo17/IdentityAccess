@@ -9,6 +9,21 @@ services:
       - "14333:1433"
     volumes:
       - mssqldata:/var/opt/mssql
+    restart: unless-stopped
+
+  api:
+    build: .
+    container_name: identityaccess-api
+    depends_on:
+      - mssql
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      # IMPORTANTE: no compose, use o nome do serviço "mssql" como host do SQL
+      ConnectionStrings__Default: "Server=mssql,1433;Database=IdentityAccess;User Id=sa;Password=YourStrong!Passw0rd;Encrypt=True;TrustServerCertificate=True"
+      Jwt__Key: "troque-por-uma-chave-forte"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
 
 volumes:
   mssqldata:
